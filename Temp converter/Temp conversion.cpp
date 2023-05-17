@@ -32,13 +32,30 @@ int Calculate(){
     }
 }
 
+
 int main(){
     bool running = true;
-    int loops;
+    int loops = 0;
+    std::string input;
     while(running){
-        if(loops>0){
-            std::cout << "Would you like to continue, if not press enter.";
+        if(loops>0) {
+            std::cout << "\nIf you would you like to continue type (y), if not press enter to exit: ";
+            std::cin.ignore();
+            std::getline(std::cin,input);
+            if(input == "y"){
+                Calculate();
+            }
+            else {
+                running = false;
+                std::cout << "Program ended.";
+                break;
+            }
+        }
+        else {
+            // Starts the program the first time the program is run
+            loops++;
+            Calculate();
         }
     }
-
 }
+
