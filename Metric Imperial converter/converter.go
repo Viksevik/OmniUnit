@@ -13,13 +13,13 @@ func main() {
 	var kg float64
 	var ml float64
 	var l float64
-	fmt.Println("Type (m) to convert to mertric or type (i) to convert to imperial")
+	fmt.Println("Type (m) to convert to metric or type (i) to convert to imperial")
 	fmt.Scan(&sl)
 	if sl == "i" || sl == "I" {
-		fmt.Println("Type (l) for length convertion. Type (m) for mass convertion. Type (c) for capacity convertion.")
+		fmt.Println("Type (l) for length conversion. Type (m) for mass conversion. Type (c) for capacity conversion.")
 		fmt.Scan(&sl)
 		if sl == "l" || sl == "L" {
-			fmt.Println("Type (i) for inches. Type (f) for foot. Type (y) for yard. type (m) mile.")
+			fmt.Println("Type (i) for inches. Type (f) for foot. Type (y) for yard. Type (m) mile.")
 			fmt.Scan(&sl)
 			switch sl {
 			case "i":
@@ -82,11 +82,14 @@ func main() {
 				fmt.Scanln()
 			case "g":
 				fmt.Println("How many L?")
-				fmt.Scan(l)
+				fmt.Scan(&l)
 				result = l * 0.264172
 				fmt.Printf("%.2f gallons", result)
 				fmt.Scanln()
 			}
 		}
 	}
+
+	fmt.Println("\nPress Enter to exit...")
+	fmt.Scanln()
 }
