@@ -27,21 +27,25 @@ func main() {
 				fmt.Scan(&cm)
 				result = cm / 2.54
 				fmt.Printf("%.2f", result)
+				fmt.Scanln()
 			case "f":
 				fmt.Println("How many cm?")
 				fmt.Scan(&cm)
 				result = 1 / 2.54 / 12
 				fmt.Printf("%.2f feet", result)
+				fmt.Scanln()
 			case "y":
 				fmt.Println("How many meters?")
 				fmt.Scan(&meters)
 				result = meters / 0.9144
 				fmt.Printf("%.2f yards", result)
+				fmt.Scanln()
 			case "m":
 				fmt.Println("How many km?")
 				fmt.Scan(&km)
 				result = km / 1.609344
 				fmt.Printf("%.2f miles", result)
+				fmt.Scanln()
 			}
 		} else if sl == "m" || sl == "M" {
 			fmt.Println("Type (p) for pounds. Type (s) for stone")
@@ -52,11 +56,13 @@ func main() {
 				fmt.Scan(&kg)
 				result = kg / 0.45359237
 				fmt.Printf("%.2f pounds", result)
+				fmt.Scanln()
 			case "s":
 				fmt.Println("How many kg?")
 				fmt.Scan(&kg)
 				result = kg * 0.1575
 				fmt.Printf("%.2f stone", result)
+				fmt.Scanln()
 			}
 		} else if sl == "c" || sl == "C" {
 			fmt.Println("Type (floz) for fluid ounces. Type (p) for pints. Type (g) for gallons.")
@@ -67,16 +73,19 @@ func main() {
 				fmt.Scan(&ml)
 				result = ml * 0.033814
 				fmt.Printf("%.2f fluid ounces", result)
+				fmt.Scanln()
 			case "p":
 				fmt.Println("How many L?")
 				fmt.Scan(&l)
 				result = l * 2.113376
 				fmt.Printf("%.2f pints", result)
+				fmt.Scanln()
 			case "g":
 				fmt.Println("How many L?")
 				fmt.Scan(l)
 				result = l * 0.264172
 				fmt.Printf("%.2f gallons", result)
+				fmt.Scanln()
 			}
 		}
 	}
