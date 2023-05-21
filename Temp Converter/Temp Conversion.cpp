@@ -1,7 +1,7 @@
 #include <iostream>
 
 void CalculateTemp(){
-    int Temp;
+    double Temp;
     char Metric;
     std::cout << "type (f) to convert from Fahrenheit, type (c) to convert from Celsius or Centigrade, type (k) to convert from Kelvin and type (r) to convert from Rankine: ", std::cin >> Metric;
     std::cout << "What temperature would you like to convert? ", std::cin >> Temp;

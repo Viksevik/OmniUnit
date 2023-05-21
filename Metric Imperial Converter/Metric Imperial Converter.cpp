@@ -5,19 +5,19 @@
 #include <string>
 
 void MetricImperialConverter() {
-    std::string sl;
+    std::string selected;
     double cm, meters, result, km, kg, ml, l, foot, miles, ounces, pounds, stone, pints;
 
     std::cout << "Type (m) to convert to metric or type (i) to convert to imperial" << std::endl;
-    std::cin >> sl;
+    std::cin >> selected;
 
-    if (sl == "m" || sl == "M") {
+    if (selected == "m" || selected == "M") {
         std::cout << "Type (l) for length conversion. Type (m) for mass conversion. Type (c) for capacity conversion." << std::endl;
-        std::cin >> sl;
-        if (sl == "l" || sl == "L") {
+        std::cin >> selected;
+        if (selected == "l" || selected == "L") {
             std::cout << "Type (m) for meters conversion. Type (km) for kilometer conversion." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'm':
                     std::cout << "How many feet?" << std::endl;
                     std::cin >> foot;
@@ -36,10 +36,10 @@ void MetricImperialConverter() {
                     break;
             }
         }
-        else if (sl == "m" || sl == "M") {
+        else if (selected == "m" || selected == "M") {
             std::cout << "Type (g) for gram conversion. Type (k) for kg conversion. Type (t) for ton conversion." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'g':
                     std::cout << "How many ounces?" << std::endl;
                     std::cin >> ounces;
@@ -64,10 +64,10 @@ void MetricImperialConverter() {
                     break;
             }
         }
-        else if (sl == "c" || sl == "C") {
+        else if (selected == "c" || selected == "C") {
             std::cout << "Type (l) for liter conversion. Type (dm) for decimeter conversion. Type (cl) for centiliter conversion." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'l':
                     std::cout << "How many pints?" << std::endl;
                     std::cin >> pints;
@@ -93,13 +93,13 @@ void MetricImperialConverter() {
             }
         }
     }
-    else if (sl == "i" || sl == "I") {
+    else if (selected == "i" || selected == "I") {
         std::cout << "Type (l) for length conversion. Type (m) for mass conversion. Type (c) for capacity conversion." << std::endl;
-        std::cin >> sl;
-        if (sl == "l" || sl == "L") {
+        std::cin >> selected;
+        if (selected == "l" || selected == "L") {
             std::cout << "Type (i) for inches. Type (f) for foot. Type (y) for yard. Type (m) mile." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'i':
                     std::cout << "How many cm?" << std::endl;
                     std::cin >> cm;
@@ -130,10 +130,10 @@ void MetricImperialConverter() {
                     break;
             }
         }
-        else if (sl == "m" || sl == "M") {
+        else if (selected == "m" || selected == "M") {
             std::cout << "Type (p) for pounds. Type (s) for stone." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'p':
                     std::cout << "How many kg?" << std::endl;
                     std::cin >> kg;
@@ -152,10 +152,10 @@ void MetricImperialConverter() {
                     break;
             }
         }
-        else if (sl == "c" || sl == "C") {
+        else if (selected == "c" || selected == "C") {
             std::cout << "Type (floz) for fluid ounces. Type (p) for pints. Type (g) for gallons." << std::endl;
-            std::cin >> sl;
-            switch (sl[0]) {
+            std::cin >> selected;
+            switch (selected[0]) {
                 case 'floz':
                     std::cout << "How many mL?" << std::endl;
                     std::cin >> ml;
