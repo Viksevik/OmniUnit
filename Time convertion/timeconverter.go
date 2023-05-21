@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func timeconvertion() {
 	var ttype string
 	var min, result, hours, days, weeks, months, years float64
 	fmt.Println("Type (s), (m), (h), (d), (w), (M), (y) for second, minute, hour, day, week, month and year convertion.")
