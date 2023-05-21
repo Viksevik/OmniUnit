@@ -1,0 +1,7 @@
+#ifndef OMNIUNIT_METRIC_IMPERIAL_CONVERTER_H
+#define OMNIUNIT_METRIC_IMPERIAL_CONVERTER_H
+
+void MetricImperialConverter();
+int MetricImperialMain();
+
+#endif //OMNIUNIT_METRIC_IMPERIAL_CONVERTER_H

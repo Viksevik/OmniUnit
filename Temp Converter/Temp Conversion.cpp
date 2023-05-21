@@ -1,6 +1,6 @@
 #include <iostream>
 
-int Calculate(){
+void CalculateTemp(){
     int Temp;
     char Metric;
     std::cout << "type (f) to convert from Fahrenheit, type (c) to convert from Celsius or Centigrade, type (k) to convert from Kelvin and type (r) to convert from Rankine: ", std::cin >> Metric;
@@ -28,34 +28,39 @@ int Calculate(){
             break;
 
         default:
+            std::cout << "Please type one of the options below.\n";
+            CalculateTemp();
             break;
     }
 }
 
 
-int main(){
+void TempConversion(){
     bool running = true;
     int loops = 0;
     std::string input;
     while(running){
         if(loops>0) {
-            std::cout << "\nIf you would you like to continue type (y), if not press enter to exit: ";
+            std::cout << "\nIf you would you like to continue type (y), if not press ENTER to EXIT temp conversion: ";
             std::cin.ignore();
             std::getline(std::cin,input);
-            if(input == "y"){
-                Calculate();
+            if(input == "y" || input == "Y"){
+                CalculateTemp();
             }
             else {
                 running = false;
-                std::cout << "Program ended.";
                 break;
             }
         }
         else {
             // Starts the program the first time the program is run
             loops++;
-            Calculate();
+            CalculateTemp();
         }
     }
 }
 
+int TempConversionMain(){
+    TempConversion();
+    return 0;
+}
